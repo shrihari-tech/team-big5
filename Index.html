@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="final.css">
+    <script src="https://kit.fontawesome.com/f30fac2c61.js" crossorigin="anonymous"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Catamaran:wght@200&family=Courgette&family=Edu+TAS+Beginner:wght@700&family=Lato:wght@300;900&family=Mukta:wght@700&family=Mulish:wght@300&family=Open+Sans&family=PT+Sans:ital,wght@1,700&family=Poppins:wght@300&family=Raleway:wght@100&family=Roboto&family=Roboto+Condensed:wght@700&family=Roboto+Slab&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="header">
+        <div class="logo">
+            <a href="#" style="color: white; text-decoration: none;">Welcome to Our Website!</a>
+        </div>
+        <div class="nav-items">
+            <input type="text" class="search-bar" placeholder="Search products...">
+        </div>
+        <div class="login">
+            <a href="Login.html" style="color: white; text-decoration: none;">Login</a>
+        </div>
+    </div>
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <h1><u>BIG5</u> Store</h1>
+            </div>
+            <ul>
+                <li>
+                    <a id="home" onclick="homes()">Home</a>
+                    <a id="shop" onclick="shops()">Shops</a>
+                    <a id="blog" onclick="blogs()">Blog</a>
+                    <a id="about" onclick="abouts()">About</a>
+                    <a id="contact" onclick="contacts()">Contact</a>
+                    <a id="cart" onclick="showCart()">Cart</a>
+                    <i class="fa-sharp fa-solid fa-cart-shopping"></i>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="main">
+            <div class="mainText">
+                <h2>BIG5</h2>
+                <h1 class="top">Super Value Deals</h1>
+                <h1>On All Products</h1>
+                <p>Domain Expansion! Infinite Shopping</p>
+                <button>Explore</button>
+            </div>
+            <img src="m3.png" alt="">
+        </div>
+
+        <div class="trend">
+            <div class="head">
+                <h1>Trending <span>Fashion</span></h1>
+            </div>
+            <div class="topic">
+            <h2>Men's <span>Wear</span></h2>
+            </div>
+            <div class="card">
+                <div class="crd">
+                    <img src="srt1.webp" alt="Mens Dress" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Cotton Shirt</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Cotton Shirt', 39, 'srt1.webp')">Add to Cart</button>
+                        <button onclick="removeFromCart('Cotton Shirt')">Remove</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="srt6.webp" alt="Mens Dress" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Gray Shirt</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Gray Shirt', 39, 'srt6.webp')">Add to Cart</button>
+                        <button onclick="removeFromCart('Gray Shirt')">Remove</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="srt2.webp" alt="Mens Dress" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Stripped Shirt</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Stripped Shirt', 39, 'srt2.webp')">Add to Cart</button>
+                        <button onclick="removeFromCart('Stripped Shirt')">Remove</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="srt8.png" height="318px" alt="Mens Dress" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Blue Kurta</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Blue Kurta', 39, 'srt8.png')">Add to Cart</button>
+                        <button onclick="removeFromCart('Blue Kurta')">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <div class="topic">
+                <h2>Women's <span>Wear</span></h2>
+            </div>
+            <div class="card">
+                <div class="crd">
+                    <img src="wn4.webp" alt="Women Dress" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Pink Dress</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Pink Dress', 39, 'wn4.webp')">Add to Cart</button>
+                        <button onclick="removeFromCart('Pink Dress')">Remove</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="wn5.webp" alt="Women Dress" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Blue Dress</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Blue Dress', 39, 'wn5.webp')">Add to Cart</button>
+                        <button onclick="removeFromCart('Blue Dress')">Remove</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="wn6.webp" alt="Women Dress" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Black Dress</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Black Dress', 39, 'wn6.webp')">Add to Cart</button>
+                        <button onclick="removeFromCart('Black dress')">Remove</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="wn8.jpeg" height="317px" alt="Women Saree" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Saree</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Saree', 39, 'wn8.jpeg')">Add to Cart</button>
+                        <button onclick="removeFromCart('Saree')">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <div class="topic">
+                <h2>Kid's <span>Wear</span></h2>
+            </div>
+            <div class="card">
+                <div class="crd">
+                    <img src="kn1.webp" height="318" alt="Boys Wear" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>White & Blue Shorts</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('White & Blue Shorts', 39, 'kn1.webp')">Add to Cart</button>
+                        <button onclick="removeFromCart('White & Blue Shorts')">Remove</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="kd01.avif" alt="Girls Wear" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Holi Special</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Holi Special', 39, 'kd01.avif')">Add to Cart</button>
+                        <button onclick="removeFromCart('Holi Special')">Remove</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="kd02.webp" height="318" alt="Boys Wear" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Hoddie With Pant</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Cotton Trending Shirt', 39, 'srt2.webp')">Add to Cart</button>
+                        <button onclick="removeFromCart('Cotton Trending Shirt')">Remove</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="kd03.jpg" alt="Girls Dress" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Dress</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Dress', 39, 'kd03.jpg')">Add to Cart</button>
+                        <button onclick="removeFromCart('Dress')">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="trend" id="trendSec">
+            <div class="head">
+                <h1>Popular <span>Accessories</span></h1>
+            </div>
+            <div class="card">
+                <div class="crd">
+                    <img src="ma03.jpg" alt="Men Trouser" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Mens Tie</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Mens Tie', 39, 'ma03.jpg')">Add to Cart</button>
+                        <button onclick="removeFromCart('Mens Tie')">Remove</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="mnn2.jpg" alt="Mens Glasses" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Glasses</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Glasses', 39, 'mnn2.jpg')">Add to Cart</button>
+                        <button onclick="removeFromCart('Glasses')">Remove</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="mnn4.jpg" alt="Mens Shoes" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Sports Shoe</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Sports Shoe', 39, 'mnn4.jpg')">Add to Cart</button>
+                        <button onclick="removeFromCart('Sports Shoe')">Remove</button>
+                    </div>
+                </div>         
+                <div class="crd">
+                    <img src="man1.jpg" height="318" alt="Watch" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Watch</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Watch', 39, 'man1.jpg')">Add to Cart</button>
+                        <button onclick="removeFromCart('Watch')">Remove</button>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <div class="crd">
+                    <img src="wnn2.jpg" alt="Womens watch" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Watch</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Watch', 39, 'wnn2.jpg')">Add to Cart</button>
+                        <button onclick="removeFromCart('Watch')">Remove</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="wnn3.jpg" alt="Necklace" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Gold Necklace</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Gold Necklace', 39, 'wnn3,jpg')">Add to Cart</button>
+                        <button onclick="removeFromCart('Gold Necklace')">Remove</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="wnn4.jpg" alt="Womens Necklace" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Diamond Necklace</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Diamond Necklace', 39, 'wnn4.jpg')">Add to Cart</button>
+                        <button onclick="removeFromCart('Diamond Necklace')">Remove</button>
+                    </div>
+                </div>
+                <div class="crd">
+                    <img src="wa7.png" height="318" alt="Womens Bag" onclick="show(this)">
+                    <div class="crdText">
+                        <h2>Womens Bag</h2>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i> <br>
+                        <button onclick="addToCart('Womens Bag', 39, 'wa7.png')">Add to Cart</button>
+                        <button onclick="removeFromCart('Womens Bag')">Remove</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="about">
+            <div class="aboutus">
+                <h1>#KnowUs</h1>
+                <p>Welcome to <u>BIG5 Ecommerce Store</u>, your go-to destination for [your product category, e.g., fashion, home essentials, tech gadgets]. We’re more than just an online store. We’re a community of trendsetters, innovators, and passionate shoppers like you!.</p>
+            </div>
+
+            <div class="me">
+                <img src="lap.png" alt="">
+                <div class="aboutText">
+                    <h1>Who we are ?</h1>
+                    <p>Welcome to <b>Big5 Ecommerce Platform</b>, Your ultimate destination for [fashion, accessories, home essentials, or your niche]! We are more than just an online store—we’re a passionate community dedicated to bringing you high-quality products, the latest trends, and unbeatable deals, all with a seamless shopping experience. Our mission is to make shopping fun, affordable, and effortless, offering carefully curated collections, exclusive discounts, and fast, secure shipping. Whether you're looking for everyday essentials or statement pieces, we’re here to help you shop with confidence and convenience. Join us and discover a world of style, savings, and exceptional service!</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="contact">
+            <div class="contactus">
+                <h1>#Let's Connect</h1>
+                <p>We love staying connected with our amazing shoppers—you! Whether you’re looking for the latest trends, exclusive deals, or shopping inspiration, We’ve got you covered. Join Us on Every Social Media Platform for Latest News!
+                </p>
+            </div>
+            <div class="contactMe">
+                <div class="contactText">
+                    <h1>Visit Our Office or Contact <br>
+                        Us Today</h1>
+                    <p>Address : Bengaluru, Karnataka, India</p>
+                    <p>Contact : BIG5ecommerce@gamil.com</p>
+                    <p>Number : 7204183764</p>
+                </div>
+                <img src="map.PNG" alt="">
+            </div>
+            <div class="form">
+                <h1>Connect with Us. Fill Form</h1>
+                <input type="email" placeholder="Enter Email"> <br>
+                <input type="text" placeholder="Enter First Name"> <br>
+                <input type="text" placeholder="Enter Last Name"> <br>
+                <input type="number" placeholder="Enter Mobile Number"> <br>
+                <input type="number" placeholder="Enter Age"> <br>
+                <button>Submit</button>
+            </div>
+        </div>
+
+        <div class="cart-display" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="cart-count">Items in cart: 0</p>
+            <p id="cart-total">Total: $0</p>
+            <div class="checkout-button">
+                <a href="checkout.html" style="color: white; text-decoration: none;">Checkout</a>
+            </div>
+        </div>
+
+        <div class="trends">
+            <div class="head">
+                <h1><span>Men's Wear</span> & <span>Women's Wear</span></h1>
+            </div>
+            <div class="card">
+                <div class="blog">
+                    <img src="tr1.webp" alt="">
+                    <div class="blogText">
+                        <h2>Trending Girl Cloths</h2>
+                        <p>Step up your style with this season’s hottest fashion trends! From flowy maxi dresses and chic co-ord sets to oversized blazers and Y2K-inspired denim.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+                <div class="blog">
+                    <img src="tr3.webp" alt="">
+                    <div class="blogText">
+                        <h2>Trending Boys Cloths</h2>
+                        <p>Stay ahead of the style game with the latest men’s fashion trends! From oversized tees and relaxed-fit jeans to sleek monochrome outfits and bold statement sneakers.</p>
+                        <a href="#">Read More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cart-display" style="display: none;">
+            <h2>Your Cart</h2>
+            <ul id="cart-items"></ul>
+            <p id="cart-count">Items in cart: 0</p>
+            <p id="cart-total">Total: $0</p>
+        </div>
+        <div class="letter">
+            <div class="letterText">
+                <h1>Sign Up for NewsLetter</h1>
+                <p>Don't Miss the Exculsive Deals, Be the First One to Hear About It!</p>
+            </div>
+            <div class="inp">
+                <input type="text" placeholder="Enter Email">
+                <button>Sign Up</button>
+            </div>
+        </div>
+
+        <div class="footer">
+            <div class="footerText">
+                <h1>Trends</h1>
+                <p>Customer Service </p>
+                <p>Shopping</p>
+                <p>Satisfaction</p>
+                <p></p>
+            </div>
+            <div class="footerText">
+                <h1>About US</h1>
+                <p>Address : No. 63, 14th Cross,
+                 9th Main Road, 2nd Stage, RR nagar,
+                 Bengaluru, Karnataka 560038, India</p>
+                <p>Service</p>
+                <p>Customer</p>
+                <p>Satisfation</p>
+            </div>
+            <div class="footerText">
+                <h1>Contact</h1>
+                <p>9989003229</p>
+                <p>Customer Service</p>
+                <p>New Arrival</p>
+            </div>
+            <div class="footerText">
+                <h1>Offer!</h1>
+                <p>Men Wear</p>
+                <p>Women Fashion</p>
+                <p>Children Wear</p>
+                <p>Other Varities</p>
+            </div>
+        </div>
+    </div>
+    <script src="final.js"></script>
+</body>
+</html>
+

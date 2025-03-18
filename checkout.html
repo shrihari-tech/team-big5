@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 400px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+        }
+        input[type="text"], input[type="number"], input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: #218838;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Checkout</h1>
+    <form id="checkoutForm">
+        <label for="cardNumber">Card Number</label>
+        <input type="text" id="cardNumber" placeholder="1234 5678 9012 3456" required>
+
+        <label for="cardName">Cardholder Name</label>
+        <input type="text" id="cardName" placeholder="John Doe" required>
+
+        <label for="expiryDate">Expiry Date (MM/YY)</label>
+        <input type="text" id="expiryDate" placeholder="MM/YY" required>
+
+        <label for="cvv">CVV</label>
+        <input type="number" id="cvv" placeholder="123" required>
+
+        <input type="submit" value="Checkout">
+    </form>
+</div>
+
+<script>
+    document.getElementById('checkoutForm').addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the form from submitting the traditional way
+
+        // Get the values from the form
+        const cardNumber = document.getElementById('cardNumber').value;
+        const cardName = document.getElementById('cardName').value;
+        const expiryDate = document.getElementById('expiryDate').value;
+        const cvv = document.getElementById('cvv').value;
+
+        // Simulate a transaction process
+        if (validateCardDetails(cardNumber, expiryDate, cvv)) {
+            alert("Transaction successful! Thank you for your purchase, " + cardName + ".");
+            // Reset the form
+            document.getElementById('checkoutForm').reset();
+        } else {
+            alert("Transaction Successful!");
+        }
+    });
+
+    function validateCardDetails(cardNumber, expiryDate, cvv) {
+        // Basic validation for demonstration purposes
+        const cardNumberPattern = /^\d{4} \d{4} \d{4} \d{4}$/; // Format: 1234 5678 9012 3456
+        const expiryDatePattern = /^(0[1-9]|1[0-2])\/\d{2}$/; // Format: MM/YY
+        const cvvPattern = /^\d{3}$/; // 3 digits
+
+        return cardNumberPattern.test(cardNumber) && 
+               expiryDatePattern.test(expiryDate) && 
+               cvvPattern.test(cvv);
+    }
+</script>
+
+</body>
+</html>
